@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>To Do List</title>
+    <script src="todolist.js"></script>
+    <style>
+		body{
+			background-color: rgba(16, 219, 238, 0.219);
+		}
+        #footer {
+            color: red;
+            height: 10vh;
+            text-align: center;
+            font-size: 50px;
+			margin-top: 50px;
+			background-color: seashell;
+			width:20vw;
+			margin-left: 520px;
+        }
+		.container {
+			color: purple;
+			text-align: center;
+
+		}
+		#submit{
+			color: brown;
+			background-color: yellow;
+			font-weight: bolder;
+			border: none;
+		}
+    </style>
+
+	
+</head>
+
+<body>
+	<div id = "footer">
+		TODO list
+	</div>
+
+	<div class="container mt-3">
+		<h2>Add Items</h2>
+		<label id="lblsuccess" class="text-success"style="display: none;"></label>
+		
+		<form id="addForm">
+			<div class="row">
+				<div class="col-lg-7 col-md-7 col-sm-7">
+<input type="text" onkeyup="toggleButton(this, 'submit')"class="form-control" id="item">
+				</div><br>
+
+				<div class="col-lg-5 col-md-5 col-sm-5">
+				<input type="submit" class="btn btn-dark"
+						id="submit" value="Submit" disabled>
+				</div>
+			</div>
+		</form>
+
+		<h3>Tasks</h3>
+
+		<form id="addForm">
+			<ul id="items"></ul>
+		</form>
+	</div>
+</body>
+
+</html>
